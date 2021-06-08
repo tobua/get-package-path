@@ -1,0 +1,39 @@
+{
+  "name": "get-package-path",
+  "description": "Get the path to the current package works with npx and global installations.",
+  "version": "0.0.0",
+  "repository": "tobua/get-package-path",
+  "license": "MIT",
+  "padua": {
+    "source": true
+  },
+  "type": "module",
+  "main": "./index.js",
+  "exports": "./exports.js",
+  "sideEffects": false,
+  "bin": "./cli.js",
+  "source": "./source.js",
+  "files": [
+    "**/*.js",
+    "!test"
+  ],
+  "devDependencies": {
+    "padua": "^0.3.6"
+  },
+  "prettier": "padua/configuration/.prettierrc.json",
+  "eslintConfig": {
+    "extends": "./node_modules/padua/configuration/eslint.cjs",
+    "rules": {
+      "import/extensions": [
+        2,
+        "ignorePackages"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">= 14"
+  },
+  "dependencies": {
+    "global-dirs": "^3.0.0"
+  }
+}
