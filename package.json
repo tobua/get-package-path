@@ -4,8 +4,14 @@
   "version": "0.0.0",
   "repository": "tobua/get-package-path",
   "license": "MIT",
+  "scripts": {
+    "test": "padua test"
+  },
   "padua": {
     "source": true
+  },
+  "dependencies": {
+    "global-dirs": "^3.0.0"
   },
   "type": "module",
   "main": "./index.js",
@@ -18,7 +24,7 @@
     "!test"
   ],
   "devDependencies": {
-    "padua": "^0.3.6"
+    "padua": "^0.3.7"
   },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {
@@ -30,10 +36,17 @@
       ]
     }
   },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": [
+        "babel-jest",
+        {
+          "configFile": "./node_modules/padua/configuration/.babelrc"
+        }
+      ]
+    }
+  },
   "engines": {
     "node": ">= 14"
-  },
-  "dependencies": {
-    "global-dirs": "^3.0.0"
   }
 }
