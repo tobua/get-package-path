@@ -1,7 +1,7 @@
 {
   "name": "get-package-path",
   "description": "Get the path to the current package works with npx and global installations.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": "tobua/get-package-path",
   "license": "MIT",
   "scripts": {
